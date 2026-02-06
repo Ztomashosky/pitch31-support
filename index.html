@@ -107,15 +107,17 @@
       background: #ffebee;
       color: #c62828;
     }
-    .form-hidden { display: none; }
+    .form-hidden { display: none !important; }
     .message.success.form-hidden,
     .message.error.form-hidden {
-      display: none;
+      display: none !important;
     }
     .recaptcha-notice {
-      font-size: 0.75rem;
-      color: #6e6e73;
-      margin: 1.5rem 0 0 0;
+      font-size: 0.8125rem;
+      color: #1d1d1f;
+      margin: 1.25rem 0 0 0;
+      padding: 0.75rem 0 0 0;
+      border-top: 1px solid #d2d2d7;
       line-height: 1.5;
     }
     .recaptcha-notice a { color: #0071e3; }
@@ -148,12 +150,12 @@
         <textarea id="message" name="message" placeholder="Your comment or feedback..." required></textarea>
       </div>
       <button type="submit" class="btn" id="submit-btn">Send message</button>
+
+      <p class="recaptcha-notice">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
     </form>
 
     <div id="success-message" class="message success form-hidden">Thanks for your message. We’ll get back to you if you left an email.</div>
     <div id="error-message" class="message error form-hidden">Something went wrong. Please try again or email us directly.</div>
-
-    <p class="recaptcha-notice">This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank" rel="noopener">Terms of Service</a> apply.</p>
   </div>
 
   <script>
